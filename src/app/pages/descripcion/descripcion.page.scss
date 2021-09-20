@@ -1,0 +1,27 @@
+.new-background-color{
+    --background: #d5d9b8;
+}
+
+ion-content.background{
+    --background: url(/assets/fondo.jpg) 0 0/100% 100% no-repeat;
+}
+
+.new-font{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-image:  linear-gradient(#5b6f6394, #5b6f6394);
+
+}
+
+.new-background-color-card{
+    --background: #7f9b6b;
+}
+
+.titulos{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.botones{
+    --background: #7f9b6b;
+}

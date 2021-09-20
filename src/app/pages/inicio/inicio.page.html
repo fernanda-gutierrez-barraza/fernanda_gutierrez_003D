@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons class="colorDetalles" slot="start">
+      <ion-button (click)="mostrarMenu()" color="d5d9b8">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-buttons  slot="end">
+      <ion-avatar>
+         <ion-img src="/assets/icono.png"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding background">
+
+ 
+  <ion-text color="light">
+    <h2 class="new-font" >Bienvenido/a a Circular </h2>
+  </ion-text>
+
+  <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card class="ion-card-slide">
+        <img src="/assets/basura.png">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="ion-card-slide">
+        <img src="/assets/compostaje.png">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="ion-card-slide">
+        <img src="/assets/arbol.png">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="ion-card-slide">
+        <img src="/assets/huerto.png">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+    <ion-card >
+      <img src="assets/infografia.jpg"/>
+    </ion-card>
+
+<br>
+<br>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="bottom">
+      <ion-fab-button class="botones"><p style="font-size: small;">Comparte</p></ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    
+     
+    </ion-fab>
+
+
+</ion-content>

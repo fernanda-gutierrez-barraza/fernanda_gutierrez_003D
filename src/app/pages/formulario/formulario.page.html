@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+ 
+  <ion-buttons  slot="end">
+    <ion-avatar>
+       <ion-img src="/assets/icono.png"></ion-img>
+    </ion-avatar>
+  </ion-buttons>
+  
+  <ion-title>Regístro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding background">
+
+
+    <ion-text color="light">
+      <h2 class="new-font" >Rellene los siguientes campos</h2>
+    </ion-text>
+  
+
+    <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+      <ion-list-header>
+        <ion-label>Formulario Válido: {{formulario.valid}} </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Nombre y Apellido: </ion-label>
+        <ion-input minLenght='3' name="nombre" [(ngModel)]= "usuario.nombre" placeholder="Ingrese su nombre y apellido" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Edad: </ion-label>
+        <ion-input type="number" name="edad" [(ngModel)]= "usuario.edad" placeholder="Ingrese su edad" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Ingrese su email"
+                   name="email" [(ngModel)]= "usuario.email"
+                   pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Password: </ion-label>
+        <ion-input type="password" placeholder="Creé una contraseña"
+                   name="password" [(ngModel)]= "usuario.password"
+                   required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-select name="genero" [(ngModel)]= "usuario.genero" placeholder="Seleccione su género" required>
+          <ion-select-option value="f">Mujer</ion-select-option>
+          <ion-select-option value="m">Hombre</ion-select-option>
+          <ion-select-option value="o">Otro</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-button [disabled] ="formulario.invalid"
+         expand="block" routerLink="/inicio" class="botones">
+         <ion-icon slot="start" name="leaf-outline"></ion-icon>
+        Enviar Datos
+      </ion-button>
+    </form>
+  
+
+  
+</ion-content>
+

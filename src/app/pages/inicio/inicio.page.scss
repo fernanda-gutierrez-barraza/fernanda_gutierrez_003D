@@ -1,0 +1,50 @@
+ion-content.background{
+    --background: url(/assets/fondo.jpg) 0 0/100% 100% no-repeat;
+}
+
+.new-background-color{
+    --background: #d5d9b8;
+}
+
+.ion-input1{
+    --background:transparent;
+    }
+
+.new-font{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-image: linear-gradient(#5b6f6394, #5b6f6394);
+
+}
+
+.botones{
+    --background: #7f9b6b;
+}
+
+.ion-card-slide {
+    width: 100%;
+    height: 160px;
+    box-shadow: none;
+    border-radius: 12px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        transform: scale(1.1, 1.1) rotate(1deg);
+        transition: 600ms all ease-in-out;
+    }
+}
+
+.swiper-slide-active {
+    transform: scale(1.05, 1.05);
+
+    .ion-card-slide {
+        img {
+            transform: scale(1, 1);
+        }
+    }
+}
+
+.swiper-slide {
+    transition: 400ms all ease-in-out;
+}
